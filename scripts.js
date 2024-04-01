@@ -65,9 +65,11 @@ mostrartarefas()
 recarregartela()
 button.addEventListener('click', adicionarnovatarefa)
 
-document.addEventListener('keypress', function(event) {
+
+function adicionarTarefaComEnter(event) {
     if (event.key === 'Enter') {
-        minhalistadeitens.push(input.value)
-        mostrartarefas()
+        adicionarnovatarefa();
     }
-  });
+}
+
+document.addEventListener('keypress', adicionarTarefaComEnter);
