@@ -64,3 +64,10 @@ mostrartarefas()
 }
 recarregartela()
 button.addEventListener('click', adicionarnovatarefa)
+
+document.addEventListener('keypress', function(event) {
+    if (event.key === 'Enter') {
+        minhalistadeitens.push(input.value)
+        mostrartarefas()
+    }
+  });
